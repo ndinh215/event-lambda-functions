@@ -1,7 +1,9 @@
-package com.company.functions;
+package com.slf.functions;
 
-import com.company.models.TemplateRequest;
-import com.company.models.TemplateResponse;
+import com.slf.core.services.repositories.DummyRepository;
+import com.slf.models.TemplateRequest;
+import com.slf.models.TemplateResponse;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.function.Function;
@@ -10,12 +12,15 @@ import java.util.logging.Logger;
 @Component
 public class TemplateFunction implements Function<TemplateRequest, TemplateResponse> {
 
+    @Autowired
+    DummyRepository dummyService;
+
     private static final Logger LOG = Logger.getLogger(String.valueOf(TemplateFunction.class));
 
     @Override
     public TemplateResponse apply(TemplateRequest request) {
         TemplateResponse response = new TemplateResponse();
-        response.setResult(request.getData());
+        response.setResult(dummyService.get());
 
         LOG.info("[INFO] " + response.getResult());
 

@@ -1,8 +1,8 @@
-package com.company.functions;
+package com.slf.functions;
 
-import com.company.handlers.FunctionApplication;
-import com.company.models.TemplateRequest;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.slf.handlers.FunctionApplication;
+import com.slf.models.TemplateRequest;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,15 +1,15 @@
-package com.company.handlers;
+package com.slf.handlers;
 
-import com.company.functions.TemplateFunction;
-import com.company.models.TemplateRequest;
-import com.company.models.TemplateResponse;
+import com.slf.functions.TemplateFunction;
+import com.slf.models.TemplateRequest;
+import com.slf.models.TemplateResponse;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import java.util.function.Function;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.slf"})
 public class FunctionApplication {
 
     public static void main(String[] args) {
